@@ -1,0 +1,36 @@
+root@chetan:~# history
+    1  cd /
+    2  ls
+    3  hostname
+    4  hostname -i
+    5  curl ifconfig.me
+    6  uname 
+    7  uname -a
+    8  ls
+    9  pwd
+   10  cd 
+   11  ls
+   12  mkdir devanshu
+   13  ls
+   14  touch saber
+   15  ls
+   16  cp saber sabeer1
+   17  ls
+   18  rm saber
+   19  ls
+   20  history
+   21  man ls
+   22  whoami
+   23  ps
+   24  top
+   25  vi sauban
+   26  cat sauban
+   27  vi sauban
+   28  cat sauban
+   29  more sauban 
+   30  ls
+   31  tail -n 5 suban
+   32  tail -n 5 sauban
+   33  tail -n 10 sauban
+   34  head -n 10 sauban
+   35  history
