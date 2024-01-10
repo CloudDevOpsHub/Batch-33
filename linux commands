@@ -29,6 +29,70 @@ root@chetan:~# history
    28  cat sauban
    29  more sauban 
    30  ls
+
+
+-----------------
+
+  1  cat /etc/os-release
+    2  ifconfig 
+    3  apt install net-tools
+    4  ifconfig 
+    5  uname -a
+    6  uptime
+    7  free
+    8  free -m
+    9  free -g
+   10  last
+   11  ps
+   12  df
+   13  df -h
+   14  du
+   15  who
+   16  touch 1/txt
+   17  touch 1.txt
+   18  ls
+   19  locate *.txt
+   20  mkdir myfiles ; touch myfiles/{a.txt,b.txt,c.txt}
+   21  ls myfiles
+   22  ls
+   23  tar -cvf allfiles.tar myfiles 
+   24  ls
+   25  adduser abc
+   26  passwd abc
+   27  id
+   28  su abc
+   29  userdel abc
+   30  su abc
+   31  addgroup dev
+   32  adduser arun
+   33  getent group
+   34  usermod -a -G dev arun
+   35  getent group
+   36  chage arun
+   37  cat  /etc/passwd
+   38  cat  /etc/shadow
+   39  cat /etc/group
+   40  cat /etc/sudoers 
+   41  netstat
+   42  ss
+   43  dig google.com
+   44  route
+   45  mtr
+   46  whois flipkart.com
+   47  apt install whois
+   48  whois flipkart.com
+   49  ifplugstatus
+   50  apt install ifplugd
+   51  apt-get update
+   52  apt install ifplugd
+   53  clear
+   54  ssh-keygen
+   55  cd /root/.ssh/id_rsa
+   56  cd /root/.ssh/
+   57  ls
+   58  cat id_rsa.pub 
+   59  cat id_rsa
+   60  history
    31  tail -n 5 suban
    32  tail -n 5 sauban
    33  tail -n 10 sauban
