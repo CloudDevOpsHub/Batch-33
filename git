@@ -1,3 +1,22 @@
 git config --global user.name "devanshu"
 
 git config --global user.email devanshugupta768@gmail.com
+
+--------------
+
+--------first time ---------
+echo "# anup-33" >> README.md
+git init
+git add README.md
+git add *
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/vikas4cloud/anup-33.git
+git push -u origin main
+
+
+----------2nd time  to unlimited 
+
+git add *
+git commit -m "2nd commit"
+git push -u origin main
