@@ -1,4 +1,20 @@
- Windows BAT
+pipeline {
+     agent any
+     stages{
+        stage(‘’){
+          steps{
+
+           }
+        }
+     }
+ }
+
+---------------------------------------
+
+
+
+
+Windows BAT
 
 
 pipeline {
