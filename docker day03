@@ -1,0 +1,52 @@
+root@nazeem:~# history
+    1  apt-get update
+    2  apt install docker.io -y
+    3  docker -v
+    4  docker images
+    5  docker ps
+    6  docker ps -a
+    7  ls
+    8  vi Dockerfile
+    9  ls
+   10  docker build -t mynginxbatch33 .
+   11  docker images
+   12  docker tag c141d2f83971 vikas4cloud/mynginxbatch33:latest
+   13  docker images
+   14  docker login
+   15  docker push vikas4cloud/mynginxbatch33:latest
+   16  docker pull devanshu18/mynginximage
+   17  docker images
+   18  docker ps -a
+   19  docker run ubuntu
+   20  docker ps -a
+   21  docker commit  389f04121c40  anup
+   22  docker images
+   23  ls
+   24  docker save anup > mybackupdev.tar
+   25  ls
+   26  docker history
+   27  docker history mynginxbatch33
+   28  docker ps
+   29  docker ps -a
+   30  docker top 389f04121c40
+   31  docker start 389f04121c40
+   32  docker top 389f04121c40
+   33  docker ps
+   34* docker 
+   35  docker start 389f04121c40
+   36  docker ps
+   37  docker run -it -d ubuntu
+   38  docke rps
+   39  docker ps
+   40  docker 773166a60163 top
+   41  docker top 773166a60163
+   42  docker inspect keen_matsumoto
+   43  docker log keen_matsumoto
+   44  docker logs keen_matsumoto
+   45  docker ps
+   46  docker stats 773166a60163
+   47  docker system df
+   48  docker images
+   49  docker ps
+   50  docker image prune -a
+   51  history
