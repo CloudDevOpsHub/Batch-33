@@ -1,0 +1,204 @@
+
+
+
+updatedb
+
+
+./
+sh 1.sh 
+
+
+----------
+
+Example 1
+
+#!/bin/bash  
+echo "This is a shell script created byt batch-33 student's"  
+ls
+echo "I am running shell scripting first time" 
+
+-------------
+
+Example 2
+#!/bin/bash 
+echo "Hello batch-33 student's"
+echo "My name is $(whoami)"
+echo "Nice to meet you"
+
+----------------
+
+#!/bin/bash  
+echo "This is a shell script"
+echo "the hostname of this machine is "
+hostname 
+hostname -i
+ps
+echo "memory used in the machine "
+free
+echo "disk used in the machine "
+df -h
+echo "the above information from the machine created by shell script"  
+SOMEVAR='answer given by divanshu'  
+echo "$SOMEVAR"
+
+
+./sh   sh 
+
+sh  ./
+
+-------------
+
+#!/bin/bash
+# Add two numeric value
+((sum=10-5))
+
+echo $sum
+
+---
+
+Example 5 Get User Input from the command line 
+
+#!/bin/bash
+echo "Enter Your email"
+read email
+echo "Welcome $email to Linux Learning session"
+
+--------------
+
+
+
+#!/bin/bash
+# Write a shell script to display the process running on the system for every
+# 30 seconds, but only for 3 times.
+# -------------------------------------------------------------------------
+# -------------------------------------------------------------------------
+# 
+# for loop 3 times
+for r in 1 2 3
+do
+	#see every process on the system
+	echo "**************************** x^x^x ****************************"
+	ps
+	echo "**************************** x^x^x ****************************"
+	#sleep for 30 seconds
+	sleep 3
+        # clean
+done
+
+
+
+Exercise:
+
+Write a script that shows the
+1) time and date 
+2) lists of logged-in users 
+3) Show running process 
+Create a new file with the name info and redirect the details in the info file.
+
+
+----------
+
+Solution 
+#!/bin/bash 
+echo "Current Date & time is $(date)" > info
+echo "Current user logged in is $(whoami)" >> info
+echo "Current running process is $(ps)" >> info
+
+
+------- for loop 
+
+Shell Script To Display The Running Process Running On The System Every 30 Seconds For 3 Times Only
+
+#!/bin/bash
+# Write a shell script to display the process running on the system for every
+# 30 seconds, but only for 3 times.
+# -------------------------------------------------------------------------
+# -------------------------------------------------------------------------
+# 
+# for loop 3 times
+for r in 1 2 3
+do
+	#see every process on the system
+	echo "**************************** x^x^x ****************************"
+	ps
+	echo "**************************** x^x^x ****************************"
+	#sleep for 30 seconds
+	sleep 3
+        # clean
+done
+
+
+------------------  big script 
+
+1) update the local file database, 2) find (and alternatively delete) files with 777 permissions, and 3) alert when filesystem usage surpasses a defined limit.
+
+#!/bin/bash
+
+# Sample script to automate tasks:
+# -Update local file database:
+echo -e "\e[4;32mUPDATING LOCAL FILE DATABASE\e[0m"
+updatedb
+if [ $? == 0 ]; then
+        echo "The local file database was updated correctly."
+else
+        echo "The local file database was not updated correctly."
+fi
+echo ""
+
+# -Find and / or delete files with 777 permissions.
+echo -e "\e[4;32mLOOKING FOR FILES WITH 777 PERMISSIONS\e[0m"
+# Enable either option (comment out the other line), but not both.
+# Option 1: Delete files without prompting for confirmation. Assumes GNU version of find.
+#find -type f -perm 0777 -delete
+# Option 2: Ask for confirmation before deleting files. More portable across systems.
+find -type f -perm 0777 -exec rm -i {} +;
+echo ""
+# -Alert when file system usage surpasses a defined limit 
+echo -e "\e[4;32mCHECKING FILE SYSTEM USAGE\e[0m"
+THRESHOLD=30
+while read line; do
+        # This variable stores the file system path as a string
+        FILESYSTEM=$(echo $line | awk '{print $1}')
+        # This variable stores the use percentage (XX%)
+        PERCENTAGE=$(echo $line | awk '{print $5}')
+        # Use percentage without the % sign.
+        USAGE=${PERCENTAGE%?}
+        if [ $USAGE -gt $THRESHOLD ]; then
+                echo "The remaining available space in $FILESYSTEM is critically low. Used: $PERCENTAGE"
+        fi
+done < <(df -h --total | grep -vi filesystem)
+
+
+vchat gpt code 
+
+chatgtp 
+
+
+
+
+create a shell script for find files with has 777 permissions  and ask with user and delete 
+
+#!/bin/bash
+
+# Prompt the user to confirm deletion
+echo "This script will find files with 777 permissions and delete them."
+read -p "Are you sure you want to proceed? (y/n): " choice
+
+if [ "$choice" = "y" ]; then
+    # Find files with 777 permissions and delete them
+    echo "Finding files with 777 permissions..."
+    find . -type f -perm 777 -exec rm -i {} \;
+    echo "Deletion completed."
+elif [ "$choice" = "n" ]; then
+    echo "Operation cancelled."
+else
+    echo "Invalid choice. Please enter 'y' or 'n'."
+fi
+
+
+
+
+
+
+ 
+
